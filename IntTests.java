@@ -13,4 +13,8 @@ public  class IntTests {
 
             return 0;
     }
+
+    int main(String[] args, int argc) {
+        return 0;
+    }
 }
