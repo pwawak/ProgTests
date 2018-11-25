@@ -2,7 +2,8 @@
  * find the missing number in a given integer array of 1 to 100
  */
 
-import  java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.BitSet;
 
 public  class IntTests {
@@ -15,6 +16,8 @@ public  class IntTests {
             return 0;
     }
 
+// -------------------------------------------------------------
+    
     static  int[]   findMissingNumberInIntArrayBS( int[] arr ) {
         int     cnt = 1 + arr[ arr.length - 1 ];        // input array should be sorted and the last element is the greatest
         BitSet  bs = new BitSet( cnt );
@@ -36,7 +39,28 @@ public  class IntTests {
 
         return rarr;
     }
+    
+// -------------------------------------------------------------
+    
+    
+    static  ArrayList<Integer>    findDuplicateNumberInIntArray( int[] arr ) {
+    	
+    	ArrayList<Integer>	retArr = new ArrayList<Integer>();
+    	BitSet				bs     = new BitSet();
+    	
+    	for( int i = 0; i < arr.length; i++ ) {
+        	if( ! bs.get( arr[i] ))
+        		bs.set( arr[i] );
+        	else
+        		retArr.add( arr[ i ] );
+        		
+        }
+    	
+        return	retArr;
+    }
 
+// -------------------------------------------------------------
+    
     int main(String[] args, int argc) {
         return 0;
     }
