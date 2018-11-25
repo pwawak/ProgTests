@@ -9,6 +9,8 @@ class IntTestsTest {
         assertEquals(5, IntTests.findMissingNumberInIntArray( new int[] {1, 2, 3, 4, 6, 9, 8} ) );
         assertEquals(5, IntTests.findMissingNumberInIntArray( new int[] {1, 2, 3, 4, 8, 9} ) );
 
-        assertArrayEquals(new int[] { 5 }, IntTests.findMissingNumberInIntArrayBS( new int[] {1, 2, 3, 4, 6} ) );
+        assertArrayEquals(new int[] { 0, 5 }, IntTests.findMissingNumberInIntArrayBS( new int[] {1, 2, 3, 4, 6} ) );
+        assertArrayEquals(new int[] { 0, 5, 6, 7 }, IntTests.findMissingNumberInIntArrayBS( new int[] {1, 2, 3, 4, 8} ) );
+        assertArrayEquals(new int[] { 0 }, IntTests.findMissingNumberInIntArrayBS( new int[] { 1 } ) );
     }
 }
